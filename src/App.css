@@ -47,3 +47,30 @@ p {
   fill: orange;
   stroke: orange;
 }
+
+.keyboard {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.key {
+  float: left;
+  border: 2px solid gray;
+  background: lightgray;
+  color: black;
+  border-radius: 3px;
+  margin: 2px;
+  font-size: 2.5rem;
+  font-weight: 700;
+  height: 3rem;
+  width: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.key:hover {
+  background-color: yellow;
+}

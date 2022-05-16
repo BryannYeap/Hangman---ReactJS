@@ -1,5 +1,6 @@
 import Header from "./components/Header";
 import Drawing from "./components/Drawing";
+import Keyboard from "./components/Keyboard";
 import "./App.css";
 
 function App() {
@@ -7,6 +8,7 @@ function App() {
     <>
       <Header />
       <Drawing />
+      <Keyboard />
     </>
   );
 }
