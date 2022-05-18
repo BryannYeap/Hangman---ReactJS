@@ -57,18 +57,31 @@ p {
   color: black;
   border-radius: 3px;
   margin: 2px;
-  font-size: 2.5rem;
+  font-size: 2rem;
   font-weight: 700;
-  height: 3rem;
-  width: 3rem;
+  height: 2.5rem;
+  width: 2.5rem;
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.nonGuessedKey {
+  border: 2px solid gray;
+  background: lightgray;
+  color: black;
+}
+
+.nonGuessedKey:hover {
+  background-color: yellow;
   cursor: pointer;
 }
 
-.key:hover {
-  background-color: yellow;
+.guessedKey {
+  border: 2px solid gray;
+  background: rgb(74, 72, 72);
+  color: rgb(101, 101, 101);
+  cursor: default;
 }
 
 .word {
