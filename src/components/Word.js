@@ -1,6 +1,6 @@
 import React from "react";
 
-const Word = ({ theme, word, correctLettersGuessed }) => {
+const Word = ({ theme, word, lettersGuessed }) => {
   return (
     <>
       <div className="theme">Theme: {theme}</div>
@@ -10,7 +10,7 @@ const Word = ({ theme, word, correctLettersGuessed }) => {
             <span key={index}>
               {letter == " " ? (
                 <>&nbsp;&nbsp;&nbsp;</>
-              ) : correctLettersGuessed.includes(letter) ? (
+              ) : lettersGuessed.includes(letter) ? (
                 letter
               ) : (
                 " _ "

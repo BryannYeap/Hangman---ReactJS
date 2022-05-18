@@ -7,26 +7,15 @@ const keyboardRows = [
   ["Z", "X", "C", "V", "B", "N", "M"],
 ];
 
-const line1Keys = keyboardRows[0];
-const line2Keys = keyboardRows[1];
-const line3Keys = keyboardRows[2];
 const allKeys = keyboardRows.flat();
 
-const Keyboard = () => {
-  const [lettersGuessed, setLettersGuessed] = useState([]);
-
-  const guessKey = (key) => {
-    if (!lettersGuessed.includes(key)) {
-      setLettersGuessed([...lettersGuessed, key]);
-    }
-  };
-
+const Keyboard = ({ onKeyAction, lettersGuessed }) => {
   useEffect(() => {
     const handleKeydown = (e) => {
       const key = e.key.toUpperCase();
 
       if (allKeys.includes(key)) {
-        guessKey(key);
+        onKeyAction(key);
       }
     };
 
@@ -38,7 +27,7 @@ const Keyboard = () => {
   }, [lettersGuessed]);
 
   const handleClick = (key) => {
-    guessKey(key);
+    onKeyAction(key);
   };
 
   return (
