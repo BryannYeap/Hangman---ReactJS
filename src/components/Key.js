@@ -1,8 +1,11 @@
 import React from "react";
 
-const Key = ({ keyVal, onClick }) => {
+const Key = ({ keyVal, guessed, onClick }) => {
   return (
-    <div className="key" onClick={onClick}>
+    <div
+      className={`${guessed ? "key guessedKey" : "key nonGuessedKey"}`}
+      onClick={onClick}
+    >
       {keyVal}
     </div>
   );

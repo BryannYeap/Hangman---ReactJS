@@ -1,3 +1,4 @@
+import React, { useState } from "react";
 import Header from "./components/Header";
 import Drawing from "./components/Drawing";
 import Word from "./components/Word";
@@ -48,12 +49,22 @@ let setOfWords = words[selectedTheme];
 let selectedWord = setOfWords[Math.floor(Math.random() * setOfWords.length)];
 
 function App() {
+  const [playable, setPlayable] = useState(true);
+  const [correctLettersGuessed, setCorrectLettersGuessed] = useState([]);
+  const [wrongLettersGuessed, setWrongLettersGuessed] = useState([]);
+
   return (
     <>
       <Header />
       <Drawing />
-      <Word theme={selectedTheme} word={selectedWord} />
-      <Keyboard />
+      <Word
+        theme={selectedTheme}
+        word={selectedWord}
+        correctLettersGuessed={correctLettersGuessed}
+      />
+      <Keyboard
+        lettersGuessed={[...correctLettersGuessed, ...wrongLettersGuessed]}
+      />
     </>
   );
 }
