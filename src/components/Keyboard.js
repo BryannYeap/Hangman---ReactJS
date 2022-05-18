@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import Key from "./Key";
 
 const keyboardRows = [
@@ -12,11 +12,15 @@ const line2Keys = keyboardRows[1];
 const line3Keys = keyboardRows[2];
 const allKeys = keyboardRows.flat();
 
-const guessKey = (key) => {
-  console.log(key);
-};
-
 const Keyboard = () => {
+  const [lettersGuessed, setLettersGuessed] = useState([]);
+
+  const guessKey = (key) => {
+    if (!lettersGuessed.includes(key)) {
+      setLettersGuessed([...lettersGuessed, key]);
+    }
+  };
+
   useEffect(() => {
     const handleKeydown = (e) => {
       const key = e.key.toUpperCase();
@@ -31,7 +35,7 @@ const Keyboard = () => {
     return () => {
       window.removeEventListener("keydown", handleKeydown);
     };
-  }, []);
+  }, [lettersGuessed]);
 
   const handleClick = (key) => {
     guessKey(key);
@@ -39,27 +43,20 @@ const Keyboard = () => {
 
   return (
     <div className="keyboard">
-      <div className="line1">
-        {line1Keys.map((key) => {
-          return (
-            <Key keyVal={key} onClick={() => handleClick(key)} key={key} />
-          );
-        })}
-      </div>
-      <div className="line2">
-        {line2Keys.map((key) => {
-          return (
-            <Key keyVal={key} onClick={() => handleClick(key)} key={key} />
-          );
-        })}
-      </div>
-      <div className="line3">
-        {line3Keys.map((key) => {
-          return (
-            <Key keyVal={key} onClick={() => handleClick(key)} key={key} />
-          );
-        })}
-      </div>
+      {keyboardRows.map((keyboardRow) => (
+        <div key={keyboardRow}>
+          {keyboardRow.map((key) => {
+            return (
+              <Key
+                keyVal={key}
+                guessed={lettersGuessed.includes(key)}
+                onClick={() => handleClick(key)}
+                key={key}
+              />
+            );
+          })}
+        </div>
+      ))}
     </div>
   );
 };
