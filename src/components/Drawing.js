@@ -1,32 +1,48 @@
 import React from "react";
 
-const Drawing = () => {
+const Drawing = ({ numberOfWrongGuesses }) => {
   return (
     <svg height="300" width="250" className="drawing">
       {/* Gallow */}
-      <line x1="0%" y1="95%" x2="100%" y2="95%" className="gallow" />
-      <line x1="10%" y1="5%" x2="10%" y2="95%" className="gallow" />
-      <line x1="10%" y1="5%" x2="60%" y2="5%" className="gallow" />
-      <line x1="60%" y1="5%" x2="60%" y2="15%" className="gallow" />
-      <line x1="10%" y1="15%" x2="20%" y2="5%" className="gallow" />
+      {numberOfWrongGuesses > 0 && (
+        <>
+          <line x1="0%" y1="95%" x2="100%" y2="95%" className="gallow" />
+          <line x1="10%" y1="5%" x2="10%" y2="95%" className="gallow" />
+          <line x1="10%" y1="5%" x2="60%" y2="5%" className="gallow" />
+          <line x1="60%" y1="5%" x2="60%" y2="15%" className="gallow" />
+          <line x1="10%" y1="15%" x2="20%" y2="5%" className="gallow" />
+        </>
+      )}
 
       {/* Head */}
-      <circle cx="60%" cy="22.5%" r="8%" className="person" />
+      {numberOfWrongGuesses > 1 && (
+        <circle cx="60%" cy="22.5%" r="8%" className="person" />
+      )}
 
       {/* Body */}
-      <line x1="60%" y1="22.5%" x2="60%" y2="55%" className="person" />
+      {numberOfWrongGuesses > 2 && (
+        <line x1="60%" y1="22.5%" x2="60%" y2="55%" className="person" />
+      )}
 
       {/* Left Arm */}
-      <line x1="60%" y1="30%" x2="45%" y2="45%" className="person" />
+      {numberOfWrongGuesses > 3 && (
+        <line x1="60%" y1="30%" x2="45%" y2="45%" className="person" />
+      )}
 
       {/* Right Arm */}
-      <line x1="60%" y1="30%" x2="75%" y2="45%" className="person" />
+      {numberOfWrongGuesses > 4 && (
+        <line x1="60%" y1="30%" x2="75%" y2="45%" className="person" />
+      )}
 
       {/* Left Leg */}
-      <line x1="60%" y1="55%" x2="45%" y2="75%" className="person" />
+      {numberOfWrongGuesses > 5 && (
+        <line x1="60%" y1="55%" x2="45%" y2="75%" className="person" />
+      )}
 
       {/* Right Leg */}
-      <line x1="60%" y1="55%" x2="75%" y2="75%" className="person" />
+      {numberOfWrongGuesses > 6 && (
+        <line x1="60%" y1="55%" x2="75%" y2="75%" className="person" />
+      )}
     </svg>
   );
 };
