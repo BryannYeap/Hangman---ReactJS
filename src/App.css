@@ -114,3 +114,15 @@ p {
 .theme {
   margin-top: 1rem;
 }
+
+.popup {
+  border: black solid 2px;
+}
+
+.visible {
+  visibility: visible;
+}
+
+.hidden {
+  visibility: hidden;
+}

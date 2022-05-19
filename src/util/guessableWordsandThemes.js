@@ -1,0 +1,38 @@
+export const themes = ["Fruit", "Country", "School"];
+export const words = {
+  Fruit: [
+    "APPLE",
+    "BANANA",
+    "CHERRY",
+    "LEMON",
+    "LIME",
+    "ORANGE",
+    "PEACH",
+    "RASPBERRY",
+    "STRAWBERRY",
+    "WATERMELON",
+  ],
+  Country: [
+    "AUSTRALIA",
+    "FINLAND",
+    "GERMANY",
+    "JAMAICA",
+    "MADAGASCAR",
+    "PAKISTAN",
+    "SINGAPORE",
+    "SOUTH AFRICA",
+    "SWITZERLAND",
+    "ZIMBABWE",
+  ],
+  School: [
+    "ASSEMBLY",
+    "CAFETERIA",
+    "DETENTION",
+    "DISCIPLINE MASTER",
+    "HOMEWORK",
+    "PHYSICAL EDUCATION",
+    "STATIONERY",
+    "UNIFORM",
+    "VALEDICTORIAN",
+  ],
+};

@@ -3,7 +3,7 @@ import React from "react";
 const Key = ({ keyVal, guessed, onClick }) => {
   return (
     <div
-      className={`${guessed ? "key guessedKey" : "key nonGuessedKey"}`}
+      className={`key ${guessed ? "guessedKey" : "nonGuessedKey"}`}
       onClick={onClick}
     >
       {keyVal}
