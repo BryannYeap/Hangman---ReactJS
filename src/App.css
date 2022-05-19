@@ -27,9 +27,14 @@ p {
   margin-bottom: 1.5px;
 }
 
+.hangman-game {
+  position: relative;
+}
+
 .drawing {
   background-color: rgb(206, 231, 150);
   border: black solid 2px;
+  border-radius: 10px;
   padding: 15px;
   stroke-linecap: round;
   stroke-width: 0.5rem;
@@ -116,7 +121,15 @@ p {
 }
 
 .popup {
+  background-color: blanchedalmond;
+  padding: 1rem;
   border: black solid 2px;
+  border-radius: 25px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
 }
 
 .visible {

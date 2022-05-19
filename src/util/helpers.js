@@ -1,4 +1,4 @@
-import { themes, words } from "./guessableWordsandThemes";
+import { themes, words } from "./guessableWordsAndThemes";
 
 export function selectTheme() {
   let selectedTheme = themes[Math.floor(Math.random() * themes.length)];

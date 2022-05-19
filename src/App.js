@@ -7,7 +7,11 @@ function App() {
   const selectedWord = selectWord(selectedTheme);
 
   return (
-    <HangmanGame selectedTheme={selectedTheme} selectedWord={selectedWord} />
+    <HangmanGame
+      className="hangman-game"
+      selectedTheme={selectedTheme}
+      selectedWord={selectedWord}
+    />
   );
 }
 
