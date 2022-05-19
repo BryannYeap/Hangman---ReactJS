@@ -4,15 +4,21 @@ import Drawing from "./Drawing";
 import Word from "./Word";
 import Keyboard from "./Keyboard";
 import Popup from "./Popup";
-import { showPopup } from "../util/helpers";
+import { selectTheme, selectWord } from "../util/helpers";
+import WinLossEnforcer from "./WinLossEnforcer";
 
-const HangmanGame = ({ selectedWord, selectedTheme }) => {
-  const [playable, setPlayable] = useState(true);
+const HangmanGame = () => {
+  const [selectedTheme, setSelectedTheme] = useState(selectTheme());
+  const [selectedWord, setSelectedWord] = useState(selectWord(selectedTheme));
   const [lettersGuessed, setLettersGuessed] = useState([]);
   const [numberOfWrongGuesses, setNumberOfWrongGuesses] = useState(0);
-  const [isShowingPopup, setIsShowingPopup] = useState(false);
+  const [playable, setPlayable] = useState(true);
 
   const guessKey = (key) => {
+    if (!playable) {
+      return;
+    }
+
     if (!lettersGuessed.includes(key)) {
       setLettersGuessed([...lettersGuessed, key]);
     }
@@ -22,17 +28,42 @@ const HangmanGame = ({ selectedWord, selectedTheme }) => {
     }
   };
 
+  const resetWordsAndGuesses = () => {
+    const selectedTheme = selectTheme();
+    setSelectedTheme(selectedTheme);
+    setSelectedWord(selectWord(selectedTheme));
+    setLettersGuessed([]);
+    setNumberOfWrongGuesses(0);
+  };
+
   return (
     <>
-      <Header />
-      <Drawing numberOfWrongGuesses={numberOfWrongGuesses} />
-      <Word
-        theme={selectedTheme}
-        word={selectedWord}
-        lettersGuessed={lettersGuessed}
-      />
-      <Keyboard onKeyAction={guessKey} lettersGuessed={lettersGuessed} />
-      <Popup isShowingPopup={isShowingPopup} selectedWord={selectedWord} />
+      <>
+        <Header />
+        <Drawing
+          numberOfWrongGuesses={numberOfWrongGuesses}
+          setPlayable={setPlayable}
+        />
+        <Word
+          theme={selectedTheme}
+          word={selectedWord}
+          lettersGuessed={lettersGuessed}
+        />
+        <Keyboard onKeyAction={guessKey} lettersGuessed={lettersGuessed} />
+        <Popup
+          selectedWord={selectedWord}
+          setPlayable={setPlayable}
+          resetWordsAndGuesses={resetWordsAndGuesses}
+        />
+      </>
+      <>
+        <WinLossEnforcer
+          lettersGuessed={lettersGuessed}
+          numberOfWrongGuesses={numberOfWrongGuesses}
+          selectedWord={selectedWord}
+          setPlayable={setPlayable}
+        />
+      </>
     </>
   );
 };

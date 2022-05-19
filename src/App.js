@@ -1,17 +1,15 @@
-import "./App.css";
+import { useState } from "react";
 import HangmanGame from "./components/HangmanGame";
-import { selectTheme, selectWord } from "./util/helpers";
+import { GameStatusContext, inPlayGameStatusCode } from "./util/constants";
+import "./App.css";
 
 function App() {
-  const selectedTheme = selectTheme();
-  const selectedWord = selectWord(selectedTheme);
+  const [gameStatus, setGameStatus] = useState(inPlayGameStatusCode);
 
   return (
-    <HangmanGame
-      className="hangman-game"
-      selectedTheme={selectedTheme}
-      selectedWord={selectedWord}
-    />
+    <GameStatusContext.Provider value={{ gameStatus, setGameStatus }}>
+      <HangmanGame className="hangman-game" />
+    </GameStatusContext.Provider>
   );
 }
 
