@@ -8,7 +8,7 @@ const Word = ({ theme, word, lettersGuessed }) => {
         {word.split("").map((letter, index) => {
           return (
             <span key={index}>
-              {letter == " " ? (
+              {letter === " " ? (
                 <>&nbsp;&nbsp;&nbsp;</>
               ) : lettersGuessed.includes(letter) ? (
                 letter
