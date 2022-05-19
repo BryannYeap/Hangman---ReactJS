@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect } from "react";
 import Key from "./Key";
 
 const keyboardRows = [
@@ -24,7 +24,7 @@ const Keyboard = ({ onKeyAction, lettersGuessed }) => {
     return () => {
       window.removeEventListener("keydown", handleKeydown);
     };
-  }, [lettersGuessed]);
+  }, [lettersGuessed, onKeyAction]);
 
   const handleClick = (key) => {
     onKeyAction(key);
