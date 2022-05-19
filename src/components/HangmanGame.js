@@ -10,7 +10,7 @@ const HangmanGame = ({ selectedWord, selectedTheme }) => {
   const [playable, setPlayable] = useState(true);
   const [lettersGuessed, setLettersGuessed] = useState([]);
   const [numberOfWrongGuesses, setNumberOfWrongGuesses] = useState(0);
-  const [isShowingPopup, setIsShowingPopup] = useState(true);
+  const [isShowingPopup, setIsShowingPopup] = useState(false);
 
   const guessKey = (key) => {
     if (!lettersGuessed.includes(key)) {

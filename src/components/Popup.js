@@ -5,10 +5,10 @@ const Popup = ({ isShowingPopup, selectedWord }) => {
   const loseMessage = "Oh no!! You didn't guess the word!! 😭";
   return (
     <div className={`popup ${isShowingPopup ? "visible" : "hidden"}`}>
-      <h2>{winMessage}</h2>
-      <h3>The word was: {selectedWord}</h3>
+      <h3>{winMessage}</h3>
+      <h4>The word was: {selectedWord}</h4>
       <p></p>
-      <button></button>
+      <button>Play Again</button>
     </div>
   );
 };
