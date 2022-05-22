@@ -50,4 +50,16 @@ export const words = {
     "UNIFORM",
     "VALEDICTORIAN",
   ],
+  Animal: [
+    "ALLIGATOR",
+    "BLUE RINGED OCTOPUS",
+    "BRACHIOSAURUS",
+    "DADDY LONG LEGS",
+    "ELECTRIC EEL",
+    "FLYING SQURREL",
+    "HAMMERHEAD SHARK",
+    "KOMODO DRAGON",
+    "MONITOR LIZARD",
+    "NAKED MOLE RAT",
+  ],
 };
