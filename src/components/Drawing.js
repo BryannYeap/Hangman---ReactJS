@@ -1,8 +1,8 @@
 import React from "react";
 
-const Drawing = ({ numberOfWrongGuesses }) => {
+const Drawing = ({ numberOfWrongGuesses, drawingWidth, drawingHeight }) => {
   return (
-    <svg height="300" width="250" className="drawing">
+    <svg width={drawingWidth} height={drawingHeight} className="drawing">
       {/* Gallow */}
       {numberOfWrongGuesses > 0 && (
         <>

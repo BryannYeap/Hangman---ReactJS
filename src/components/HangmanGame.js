@@ -7,7 +7,7 @@ import Popup from "./Popup";
 import { selectTheme, selectWord } from "../util/helpers";
 import WinLossEnforcer from "./WinLossEnforcer";
 
-const HangmanGame = () => {
+const HangmanGame = ({ mediaProperties }) => {
   const [selectedTheme, setSelectedTheme] = useState(selectTheme());
   const [selectedWord, setSelectedWord] = useState(selectWord(selectedTheme));
   const [lettersGuessed, setLettersGuessed] = useState([]);
@@ -39,21 +39,33 @@ const HangmanGame = () => {
   return (
     <>
       <>
-        <Header />
+        <Header fontPercentage={mediaProperties.headerProp.fontPercentage} />
+
         <Drawing
           numberOfWrongGuesses={numberOfWrongGuesses}
-          setPlayable={setPlayable}
+          drawingWidth={mediaProperties.drawingProp.width}
+          drawingHeight={mediaProperties.drawingProp.height}
         />
+
         <Word
           theme={selectedTheme}
           word={selectedWord}
           lettersGuessed={lettersGuessed}
+          fontPercentage={mediaProperties.wordProp.fontPercentage}
         />
-        <Keyboard onKeyAction={guessKey} lettersGuessed={lettersGuessed} />
+
+        <Keyboard
+          onKeyAction={guessKey}
+          lettersGuessed={lettersGuessed}
+          sideLengthInRem={mediaProperties.keyProp.sideLengthInRem}
+          fontPercentage={mediaProperties.keyProp.fontPercentage}
+        />
+
         <Popup
           selectedWord={selectedWord}
           setPlayable={setPlayable}
           resetWordsAndGuesses={resetWordsAndGuesses}
+          fontPercentage={mediaProperties.popupProp.fontPercentage}
         />
       </>
       <>

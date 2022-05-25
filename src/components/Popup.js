@@ -6,7 +6,12 @@ import {
   inPlayGameStatusCode,
 } from "../util/constants";
 
-const Popup = ({ selectedWord, setPlayable, resetWordsAndGuesses }) => {
+const Popup = ({
+  selectedWord,
+  setPlayable,
+  resetWordsAndGuesses,
+  fontPercentage,
+}) => {
   const winMessage = "Congratulations! You guessed the word! 😁";
   const loseMessage = "Oh no!! You didn't guess the word!! 😭";
   const gameStatusContext = useContext(GameStatusContext);
@@ -32,6 +37,7 @@ const Popup = ({ selectedWord, setPlayable, resetWordsAndGuesses }) => {
       className={`popup 
       ${isShowingPopup ? "visible" : "hidden"}
       ${gameStatus === winGameStatusCode ? "won" : "lost"}`}
+      style={{ fontSize: `${fontPercentage}%` }}
     >
       <h3>{finalMessage}</h3>
       <h4>The word was: {selectedWord}</h4>

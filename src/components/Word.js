@@ -1,10 +1,13 @@
 import React from "react";
 
-const Word = ({ theme, word, lettersGuessed }) => {
+const Word = ({ theme, word, lettersGuessed, fontPercentage }) => {
   return (
     <>
-      <div className="theme">Theme: {theme}</div>
-      <div className="word">
+      <div className="theme" style={{ fontSize: `${fontPercentage}%` }}>
+        Theme: {theme}
+      </div>
+
+      <div className="word" style={{ fontSize: `${fontPercentage}%` }}>
         {word.split("").map((letter, index) => {
           return (
             <span key={index}>

@@ -1,12 +1,14 @@
 import React from "react";
 
-const Header = () => {
+const Header = ({ fontPercentage }) => {
   return (
     <>
       <h1>
-        <b>Hangman</b>
+        <b style={{ fontSize: `${fontPercentage}%` }}>Hangman</b>
       </h1>
-      <p>Pick a letter to start guessing the word</p>
+      <p style={{ fontSize: `${fontPercentage}%` }}>
+        Pick a letter to start guessing the word
+      </p>
       <hr />
     </>
   );

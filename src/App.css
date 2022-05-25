@@ -1,5 +1,5 @@
 body {
-  background: white;
+  background-color: beige;
   font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue",
     Helvetica, Arial, "Lucida Grande", sans-serif;
   color: black;
@@ -33,7 +33,7 @@ button {
   border-radius: 10px;
   color: #2980b9;
   padding: 12px 20px;
-  font-size: 16px;
+  font-size: 14px;
 }
 
 button:active {
@@ -103,8 +103,6 @@ button:hover {
   margin: 2px;
   font-size: 2rem;
   font-weight: 700;
-  height: 2.5rem;
-  width: 2.5rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -129,7 +127,6 @@ button:hover {
 }
 
 .word {
-  font-size: 2rem;
   margin-bottom: 1.5rem;
 }
 
