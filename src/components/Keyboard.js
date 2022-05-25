@@ -9,12 +9,7 @@ const keyboardRows = [
 
 const allKeys = keyboardRows.flat();
 
-const Keyboard = ({
-  onKeyAction,
-  lettersGuessed,
-  sideLengthInRem,
-  fontPercentage,
-}) => {
+const Keyboard = ({ onKeyAction, lettersGuessed, mediaProperties }) => {
   useEffect(() => {
     const handleKeydown = (e) => {
       const key = e.key.toUpperCase();
@@ -46,8 +41,9 @@ const Keyboard = ({
                 guessed={lettersGuessed.includes(key)}
                 onClick={() => handleClick(key)}
                 key={key}
-                sideLengthInRem={sideLengthInRem}
-                fontPercentage={fontPercentage}
+                sideLengthInRem={mediaProperties.keyProp.sideLengthInRem}
+                fontPercentage={mediaProperties.keyProp.fontPercentage}
+                marginInPx={mediaProperties.keyProp.marginInPx}
               />
             );
           })}

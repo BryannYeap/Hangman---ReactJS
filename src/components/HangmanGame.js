@@ -57,8 +57,7 @@ const HangmanGame = ({ mediaProperties }) => {
         <Keyboard
           onKeyAction={guessKey}
           lettersGuessed={lettersGuessed}
-          sideLengthInRem={mediaProperties.keyProp.sideLengthInRem}
-          fontPercentage={mediaProperties.keyProp.fontPercentage}
+          mediaProperties={mediaProperties}
         />
 
         <Popup

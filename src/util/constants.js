@@ -78,8 +78,9 @@ export const DesktopProp = {
     fontPercentage: 150,
   },
   keyProp: {
-    sideLengthInRem: 2.5,
+    sideLengthInRem: 2.15,
     fontPercentage: 150,
+    marginInPx: 5,
   },
   popupProp: {
     fontPercentage: 100,
@@ -88,18 +89,19 @@ export const DesktopProp = {
 
 export const TabletProp = {
   headerProp: {
-    fontPercentage: 85,
+    fontPercentage: 80,
   },
   drawingProp: {
-    width: 212.5,
-    height: 255,
+    width: 200,
+    height: 240,
   },
   wordProp: {
-    fontPercentage: 127.5,
+    fontPercentage: 125,
   },
   keyProp: {
-    sideLengthInRem: 2.125,
+    sideLengthInRem: 1.8,
     fontPercentage: 127.5,
+    marginInPx: 3,
   },
   popupProp: {
     fontPercentage: 85,
@@ -118,8 +120,9 @@ export const PhoneProp = {
     fontPercentage: 105,
   },
   keyProp: {
-    sideLengthInRem: 1.375,
-    fontPercentage: 105,
+    sideLengthInRem: 1.6,
+    fontPercentage: 120,
+    marginInPx: 2,
   },
   popupProp: {
     fontPercentage: 70,
