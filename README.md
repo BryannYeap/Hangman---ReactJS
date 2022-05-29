@@ -1,12 +1,45 @@
-# Hangman
+# HANGMAN
 
-You can test out the application here: https://frozen-dusk-39512.herokuapp.com/
+This is a web development project using HTML, CSS, and JavaScript, making use of the Reactjc framework. The project itself is a game called [Hangman](<https://en.wikipedia.org/wiki/Hangman_(game)>).
 
-# Getting Started with Create React App
+Navigate here to try out the game yourself: [HANGMAN](https://frozen-dusk-39512.herokuapp.com/)
+
+## Notable Features
+
+### Keyboard and Mouse
+
+You can use either your keyboard or mouse to provide input.
+
+### Media responsiveness
+
+The game will react responsively and shrink or grow according to the resolution of the users' media screen. For instance,
+
+Desktop View (1280x720):
+
+![desktop-view](/resources/images/1280x720)
+
+Tablet View (960x600):
+
+![tablet-view](/resources/images/960x600)
+
+Mobile View (360x640):
+
+![mobile-view](/resources/images/360x640)
+
+### CSS
+
+- The man getting hung has slight animation made using CSS's keyframes
+- Hovering over letter that have not been guessed result in a change of cursor and colour to indicate that they are guessable.
+- After guessing a letter, it will be blacked out. Additionally, hovering over them will no longer result in a change of cursor, nor colour, indicating that they are not guessable.
+- Restart game button also changes the cursor and colour upon hovering. Additionally, the button shrinks a little upon pressing the button.
+
+# Developer Guide
+
+## Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+### Available Scripts
 
 In the project directory, you can run:
 
@@ -36,43 +69,3 @@ The build is minified and the filenames include the hashes.\
 Your app is ready to be deployed!
 
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
