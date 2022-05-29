@@ -16,15 +16,15 @@ The game will react responsively and shrink or grow according to the resolution 
 
 Desktop View (1280x720):
 
-![desktop-view](/resources/images/1280x720)
+![desktop-view](/resources/images/1280x720.PNG)
 
 Tablet View (960x600):
 
-![tablet-view](/resources/images/960x600)
+![tablet-view](/resources/images/960x600.PNG)
 
 Mobile View (360x640):
 
-![mobile-view](/resources/images/360x640)
+![mobile-view](/resources/images/360x640.PNG)
 
 ### CSS
 
