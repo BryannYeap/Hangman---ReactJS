@@ -1,6 +1,6 @@
 # HANGMAN
 
-This is a web development project using HTML, CSS, and JavaScript, making use of the ReactJS framework. The project itself is a game called [Hangman](<https://en.wikipedia.org/wiki/Hangman_(game)>).
+This is a solo web development project using HTML, CSS, and JavaScript, making use of the ReactJS framework. The project itself is a game called [Hangman](<https://en.wikipedia.org/wiki/Hangman_(game)>).
 
 Navigate here to try out this web project yourself: [HANGMAN](https://frozen-dusk-39512.herokuapp.com/) 
 
