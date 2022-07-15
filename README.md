@@ -2,7 +2,7 @@
 
 This is a solo web development project using HTML, CSS, and JavaScript, making use of the ReactJS framework. The project itself is a game called [Hangman](<https://en.wikipedia.org/wiki/Hangman_(game)>).
 
-Navigate here to try out this web project yourself: [HANGMAN](https://frozen-dusk-39512.herokuapp.com/) 
+Navigate here to try out this web project yourself: [HANGMAN PROJECT](https://frozen-dusk-39512.herokuapp.com/)
 
 Note: This application is hosted on a free Heroku account, thus might take 15-20s to load
 
@@ -27,6 +27,10 @@ Tablet View (960x600):
 Mobile View (360x640):
 
 ![mobile-view](/resources/images/360x640.PNG)
+
+### SVG
+
+The hangman drawing was manually made using SVG.
 
 ### CSS
 
